@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <title>Skin Cancer Detector</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/woza.css" />
+    <script type="text/javascript" src="js/target_classes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <script type="text/javascript" src="js/mobile-net.js"></script>
+  </head>
+  <body>
+
+    <div class="w3-center w3-margin-top">
+      <p class="space-letters">
+        
+        <a href="start.html"><button style="font-size: 20px;background-color: #1f0634;color: white;">Home</button></a> <br>
+        <strong><p id="demo"></p></strong>
+        
+
+        <script >
+          let hour = new Date().getHours();
+          let greeting;
+          if (hour < 12) {
+              greeting = "Good morning , Have a Nice Day";
+          } else if (hour < 17) {
+              greeting = "Have a Good day";
+          } else if (hour < 20) {
+              greeting = "Good evening";
+          }
+            else {
+              greeting = "Good Night";
+            }
+
+          document.getElementById("demo").innerHTML = greeting;
+
+      </script>
+      </p>
+    </div>
+
+    <div class="w3-center w3-margin-top">
+      <h1 style="font-size: 20px;" align="center">Welcome to Skin Cancer Detector</h1>
+      <h1 style="font-size: 20px;" align="center">1) Select a Image by clicking on Upload button</h1>    
+      <h1 style="font-size: 20px;" align="center">2) Load Model by clicking Load model button</h1>    
+      <h1 style="font-size: 20px;" align="center">3) You can predict the results by predict button</h1>    
+    </div>
+    <div class="container">
+      <div class="mobilenet-demo-container">
+        <h1>Skin Cancer Detector</h1>
+        <div class="demo-wrapper">
+          <div>
+            <button id="load-button" class="input-button" onclick="loadModel()">
+              Load Model
+            </button>
+            <button
+              id="demo-image-button"
+              class="input-button"
+              onclick="loadDemoImage()"
+            >
+              Demo Image
+            </button>
+            <label for="select-file-image" class="input-button">
+              Upload Image
+            </label>
+            <input
+              id="select-file-image"
+              type="file"
+              onchange="loadFile(event)"
+              style="display: none"
+            />
+            <div
+              id="progress-box"
+              style="display: none; width: 100% !important"
+            >
+              <img src="assets/loading.gif" id="demo-load" width="100px" />
+              <p style="color: white">Loading mobilenet model..</p>
+            </div>
+          </div>
+          <div>
+            <button
+              id="predict-button"
+              class="input-button predict-button"
+              onclick="predButton()"
+              style="color: rgb(255, 255, 255);"
+            >
+              Predict
+            </button>
+          </div>
+        </div>
+        <!-- <div>
+          <button
+              id="predict-button"
+              class="input-button predict-button"
+              onclick="predButton()"
+              style="color: rgb(255, 255, 255);"
+            >
+              Information
+            </button>
+          </div>
+        </div> -->
+        <div class="demo-output">
+          <div class="out-box" id="select-file-box" style="display: none">
+            <img id="test-image" height="300px" width="450px" margin="2px" />
+          </div>
+          <div class="out-box" id="predict-box" style="display: none">
+            <p id="prediction"></p>
+            <br />
+            <p>
+              <b
+                style="
+                  color: #c2c2c2 !important;
+                  font-style: italic;
+                  font-weight: 100;
+                  font-size: 18px;
+                "
+                >Top-3 Predictions</b
+              >
+            </p>
+            <ul id="predict-list"></ul>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="chart-box" style="display: none" height="150px"></canvas>
+        </div>
+      </div>
+    </div>
+    <br>
+    <strong><p style="padding: 60 60 60 60; font-size: 20px; font-weight:2px; font-family: cursive; display: block;
+      margin-left: 241;
+      margin-right: 200; " id="demo1"></p></strong>
+     <!-- <p>
+      <a href="https://www.askapollo.com/symptom/melanocytic-nevus/mumbai">Top Doctors for Melanocytic-nevus in Mumbai</a>
+     </p> -->
+    <strong><p style="padding: 60 60 60 60;" id="demo2"></p></strong>
+    
+    <br>
+     <p style="color: #1f0634; font-size: 18; text-align: center; display: block;">* This Project is in Development Stage and can be only used as primary detection kit <br> Kindly Refer to Doctor if early stages of cancer are detected *</p>
+
+
+  </body>
+</html>

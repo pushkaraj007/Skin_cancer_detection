@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 32.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #a565bc;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>Details About Cancer</h1>
+  <p>These are the classification of Lesion particularly found on skin</p>
+  <a href="index.html"><button style="background-color: #a565bc; font-size: large;">Detect Early</button></a>
+  <a href="start.html"><button style="background-color: #a565bc; font-size: large;">Home Page</button></a>
+
+</div>
+
+<h2 style="text-align:center">Various Skin Cancer</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://mooresvilledermcenter.com/wp-content/uploads/2017/12/waiting-even-month-remove-melanoma-deadly-mooresville-dermatology-center.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Melanoma </h2>
+        <p class="title">Cancerous Lesion</p>
+        <p>Melanoma occurs when the pigment-producing cells that give colour to the skin become cancerous. Symptoms might include a new, unusual growth or a change in an existing mole </p>
+        <a href="https://www.cancer.gov/types/skin/patient/melanoma-treatment-pdq#:~:text=Melanoma%20is%20a%20disease%20in,affect%20the%20risk%20of%20melanoma."> <p><button class="button">More Information</button></p></a>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://www.shutterstock.com/image-photo/melanocytic-nevus-known-nevocytic-nevuscell-260nw-1571632612.jpg" alt="Mike" style="width:77.1%">
+      <div class="container">
+        <h2>Melanocytic Nevi</h2>
+        <p class="title">Non-Cancerous</p>
+        <p>A usually non-cancerous disorder of pigment-producing skin cells commonly called birth marks or moles. This type of mole is often large and caused by a disorder involving melanocytes, cells that produce pigment (melanin).</p>
+        <a href="https://dermnetnz.org/topics/melanocytic-naevus"> <p><button class="button">More Information</button></p></a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://d148x66490prkv.cloudfront.net/c360/imported/transfer/Screen%20Shot%202016-02-26%20at%203.56.59%20PM.png" alt="John" style="width:70.6%">
+      <div class="container">
+        <h2>Benign Keratosis</h2>
+        <p class="title">Non-Cancerous</p>
+        <p>Seborrheic keratoses are usually brown, black or light tan. The growths (lesions) look waxy or scaly and slightly raised. They appear gradually, usually on the face, neck, chest or back. Seborrheic keratoses are harmless and not contagious.</p>
+  
+        <a href="https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878"> <p><button class="button">More Information</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://lakejacksonent.com/wp-content/uploads/2021/03/2144500.jpg" alt="John" style="width:60%">
+      <div class="container">
+        <h2>Vascular skin lesion</h2>
+        <p class="title">Non-Cancerous</p>
+        <p>It includes acquired lesions (eg, pyogenic granuloma) and those that are present at birth or arise shortly after birth (vascular birthmarks).Vascular birthmarks include vascular tumors (eg, infantile hemangioma) and vascular malformations</p>
+        <a href="https://www.msdmanuals.com/en-in/professional/dermatologic-disorders/benign-skin-tumors,-growths,-and-vascular-lesions/vascular-lesions-of-the-skin"> <p><button class="button">More Information</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://www.skincancer.org/wp-content/uploads/basal-cell-carcinoma-1-shiny-bump-340x240.png" alt="John" style="width:62.7%">
+      <div class="container">
+        <h2>Basal Cell Carcinoma</h2>
+        <p class="title">Cancerous</p>
+        <p>Basal cell carcinoma begins in the basal cells — a type of cell within the skin that produces new skin cells as old ones die off .Basal cell carcinoma often appears as a slightly transparent bump on the skin</p>
+        <a href="https://www.mayoclinic.org/diseases-conditions/basal-cell-carcinoma/symptoms-causes/syc-20354187"> <p><button class="button">More Information</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://atlantaskinwellnesscenter.com/wp-content/uploads/2022/07/ACTINIC1.jpg" alt="John" style="width:60.6%">
+      <div class="container">
+        <h2>Actinic Keratoses</h2>
+        <p class="title">Potential Cancerous</p>
+        <p>hese are common forms of sun-damage where abnormal cells have developed in the top layer of the skin (the epidermis) from excessive sun exposure. They appear as scaly patches.</p>
+        <a href="https://www.mayoclinic.org/diseases-conditions/actinic-keratosis/symptoms-causes/syc-20354969"> <p><button class="button">More Information</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://escholarship.org/content/qt2hg6q36k/1.jpg" alt="John" style="width:70%">
+      <div class="container">
+        <h2> Dermatofibroma</h2>
+        <p class="title">Non-Cancerous</p>
+        <p> It is a commonly occurring cutaneous entity usually centered within the skin's dermis. Dermatofibromas are referred to as benign fibrous histiocytomas of the skin, superficial/cutaneous benign fibrous histiocytomas, or common fibrous histiocytoma.</p>
+        <a href="https://emedicine.medscape.com/article/1056742-overview"> <p><button class="button">More Information</button></p></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
